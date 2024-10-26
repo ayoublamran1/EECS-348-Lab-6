@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>CSS Font Control</title>
+        <style>
+                body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f2f2f2;
+                }
+                .container {
+                        margin: 50px auto;
+                        max-width: 600px;
+                        padding: 20px;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 10px #999;
+                }
+                p {
+                        font-size: 20px;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                        padding: 10px;
+                        border: 2px solid #333;
+                        width: 80%;
+                        color: #333;
+                }
+                input[type="text"] {
+                        margin-right: 10px;
+                        padding: 5px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        width: 80px;
+                }
+                input[type="submit"] {
+                        padding: 5px 10px;
+                        background-color: #006699;
+                        color: #fff;
+                        border: none;
+                        border-radius: 3px;
+                        cursor: pointer;
+                }
+        </style>
+</head>
+<body>
+        <div class="container">
+                <p id="my-paragraph">Michael Jackson's "Billie Jean," released in 1983 on his album Thriller, is one of the most iconic pop songs of all time. 
+                    The song is built around a distinctive bassline and a haunting story about a woman named Billie Jean, who claims that Jackson is the father of her child. 
+                    Inspired by the real-life experiences of Jackson and his brothers, who often encountered fan obsessions and false paternity claims, the song explores themes of fame, deceit, and vulnerability. 
+                    The track not only topped global charts but also redefined pop music with its blend of funk, R&B, and rock elements. Jackson’s moonwalk debut during the song's live performance on Motown 25 solidified both the song and the artist’s legacy in music history.>
+                <label for="font-color">Font Color:</label>
+                <input type="text" id="font-color" name="font-color" placeholder="RGB">
+                <label for="border-color">Border Color:</label>
+                <input type="text" id="border-color" name="border-color" placeholder="RGB">
+                <label for="border-width">Border Width:</label>
+                <input type="text" id="border-width" name="border-width" placeholder="px">
+                <input type="submit" value="Apply" onclick="applyStyles()">
+        </div>
+        <script>
+                function applyStyles() {
+                        var paragraph = document.getElementById("my-paragraph");
+                        var fontColor = document.getElementById("font-color").value;
+                        var borderColor = document.getElementById("border-color").value;
+                        var borderWidth = document.getElementById("border-width").value;
+                        paragraph.style.color = "rgb(" + fontColor + ")";
+                        paragraph.style.borderColor = "rgb(" + borderColor + ")";
+                        paragraph.style.borderWidth = borderWidth + "px";
+                }
+        </script>
+</body>
+</html>
